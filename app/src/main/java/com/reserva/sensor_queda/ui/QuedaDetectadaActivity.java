@@ -21,7 +21,6 @@ import com.reserva.sensor_queda.componente.VisaoAnelProgresso;
 
 import java.util.Locale;
 
-/** Tela 2 - Possivel queda detectada com contagem regressiva de 30 segundos. */
 public class QuedaDetectadaActivity extends AppCompatActivity {
 
     public static final String EXTRA_SIMULADO = "extra_simulado";

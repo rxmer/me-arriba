@@ -25,7 +25,6 @@ import com.reserva.sensor_queda.dados.TipoEvento;
 import java.util.Arrays;
 import java.util.List;
 
-/** Tela 5 - Historico de eventos. */
 public class HistoricoActivity extends AppCompatActivity {
 
     private AdaptadorEvento adapter;

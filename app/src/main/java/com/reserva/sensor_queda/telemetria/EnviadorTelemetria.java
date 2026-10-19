@@ -20,21 +20,12 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Envia telemetria/alertas para a API Socorro
- * (https://ideaberta.com.br/socorro/) via POST x-www-form-urlencoded.
- *
- * <p>Campos aceitos pela API: usuario, modelo, device_id, bateria, latitude,
- * longitude, tipo (1=Normal, 2=Queda), queda (forca em G), velocidade (km/h),
- * temperatura (C) e pressao (hPa).</p>
- */
 public final class EnviadorTelemetria {
 
     public interface Callback {
         void onResult(boolean ok, String message);
     }
 
-    /** Amostra de dados a enviar. Campos opcionais podem ser nulos. */
     public static class Amostra {
         public boolean queda;
         public float quedaG;

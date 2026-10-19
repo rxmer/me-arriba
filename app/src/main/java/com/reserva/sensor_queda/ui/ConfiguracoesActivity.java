@@ -37,7 +37,6 @@ import com.reserva.sensor_queda.sensor.DetectorQueda;
 
 import java.util.List;
 
-/** Tela 4 - Configuracoes. */
 public class ConfiguracoesActivity extends AppCompatActivity {
 
     private static final int[] OPCOES_INTERVALO = {1, 5, 10, 15, 30, 60};
@@ -251,7 +250,6 @@ public class ConfiguracoesActivity extends AppCompatActivity {
                 .setPositiveButton(R.string.salvar, null)
                 .create();
 
-        // Sobrescreve o botao para validar sem fechar o dialogo em caso de erro.
         dialog.setOnShowListener(d -> dialog.getButton(AlertDialog.BUTTON_POSITIVE)
                 .setOnClickListener(v -> {
                     layoutNome.setError(null);

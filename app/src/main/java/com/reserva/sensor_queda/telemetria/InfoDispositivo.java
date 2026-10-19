@@ -8,7 +8,6 @@ import android.provider.Settings;
 
 import java.util.UUID;
 
-/** Informacoes do aparelho enviadas na telemetria. */
 public final class InfoDispositivo {
 
     private InfoDispositivo() {

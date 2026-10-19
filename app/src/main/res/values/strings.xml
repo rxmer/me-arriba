@@ -1,11 +1,9 @@
 <resources>
     <string name="app_name">Me arriba</string>
 
-    <!-- Marca -->
     <string name="brand_safe">Me </string>
     <string name="brand_ride">arriba</string>
 
-    <!-- Tela 1 - Inicio -->
     <string name="monitoring_active">Monitoramento ativo</string>
     <string name="monitoring_inactive">Monitoramento inativo</string>
     <string name="monitoring_initializing">Inicializando…</string>
@@ -34,7 +32,6 @@
     <string name="sensor_indisponivel">Sensor indisponível neste aparelho</string>
     <string name="sensores_ok">Acelerômetro e giroscópio disponíveis</string>
 
-    <!-- Confirmacoes -->
     <string name="confirmar_panico_titulo">Acionar botão de pânico?</string>
     <string name="confirmar_panico_msg">Isso iniciará o envio de um alerta de emergência. Pressione e segure o botão para confirmar.</string>
     <string name="confirmar_simular">Simular queda (teste)</string>
@@ -42,7 +39,6 @@
     <string name="cancelar">Cancelar</string>
     <string name="confirmar">Confirmar</string>
 
-    <!-- Tela 2 - Queda -->
     <string name="queda_titulo">Possível queda detectada</string>
     <string name="queda_pergunta">Você sofreu uma queda ou acidente?</string>
     <string name="queda_estou_bem">Não, estou bem</string>
@@ -51,7 +47,6 @@
     <string name="queda_contador_segundos">%1$d</string>
     <string name="queda_contador_hint">segundos para o envio automático</string>
 
-    <!-- Tela 3 - Status do alerta -->
     <string name="alerta_enviando">Enviando alerta…</string>
     <string name="alerta_enviado">Alerta enviado à API</string>
     <string name="alerta_falha">Falha no envio</string>
@@ -87,7 +82,6 @@
     <string name="tentar_novamente">Tentar novamente</string>
     <string name="voltar_inicio">Voltar ao início</string>
 
-    <!-- Tela 4 - Configuracoes -->
     <string name="configuracoes">Configurações</string>
     <string name="secao_perfil">Perfil</string>
     <string name="nome_usuario">Nome do usuário</string>
@@ -126,7 +120,6 @@
     <string name="endpoint_hint">https://exemplo.com/api/alertas</string>
     <string name="back_desc">Voltar</string>
 
-    <!-- Tela 5 - Historico -->
     <string name="historico_titulo">Histórico de eventos</string>
     <string name="filtro_todos">Todos</string>
     <string name="filtro_quedas">Quedas</string>
@@ -135,7 +128,6 @@
     <string name="detalhes_evento">Detalhes do evento</string>
     <string name="fechar">Fechar</string>
 
-    <!-- Tipos de evento -->
     <string name="evento_queda_detectada">Queda detectada</string>
     <string name="evento_falso_positivo">Falso positivo</string>
     <string name="evento_alerta_solicitado">Alerta solicitado</string>
@@ -143,13 +135,11 @@
     <string name="evento_alerta_falhou">Alerta falhou</string>
     <string name="evento_checkin">Check-in realizado</string>
 
-    <!-- Check-in (dialogo) -->
     <string name="checkin_titulo">Check-in de segurança</string>
     <string name="checkin_pergunta">Tudo bem por aí?</string>
     <string name="checkin_sim">Sim, estou bem</string>
     <string name="checkin_ajuda">Preciso de ajuda</string>
 
-    <!-- Notificacoes/Toast -->
     <string name="toast_contato_adicionado">Contato salvo</string>
     <string name="toast_contato_removido">Contato removido</string>
     <string name="toast_campos_obrigatorios">Preencha nome e telefone</string>

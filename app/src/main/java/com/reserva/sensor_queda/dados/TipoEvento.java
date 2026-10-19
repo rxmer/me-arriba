@@ -1,6 +1,5 @@
 package com.reserva.sensor_queda.dados;
 
-/** Tipos de evento persistidos no historico. */
 public final class TipoEvento {
 
     public static final String QUEDA_DETECTADA = "queda_detectada";

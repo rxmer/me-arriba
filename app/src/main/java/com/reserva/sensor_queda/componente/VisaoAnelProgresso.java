@@ -9,7 +9,6 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-/** Anel circular reutilizado no status de monitoramento e no contador de queda. */
 public class VisaoAnelProgresso extends View {
 
     private final Paint anelFundo = new Paint(Paint.ANTI_ALIAS_FLAG);

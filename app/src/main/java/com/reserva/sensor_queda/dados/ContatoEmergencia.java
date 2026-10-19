@@ -3,7 +3,6 @@ package com.reserva.sensor_queda.dados;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/** Contato de emergencia cadastrado pelo usuario. */
 public class ContatoEmergencia {
 
     public String nome;

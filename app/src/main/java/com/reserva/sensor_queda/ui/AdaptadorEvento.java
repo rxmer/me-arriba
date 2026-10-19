@@ -16,7 +16,6 @@ import com.reserva.sensor_queda.dados.EventoEntidade;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Lista de eventos do historico. */
 public class AdaptadorEvento extends RecyclerView.Adapter<AdaptadorEvento.VisaoEvento> {
 
     public interface AoClicarEvento {

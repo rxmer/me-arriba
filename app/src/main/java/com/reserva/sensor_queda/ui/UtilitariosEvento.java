@@ -7,7 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/** Mapeia tipos de evento para recursos visuais e formata data/hora. */
 public final class UtilitariosEvento {
 
     private UtilitariosEvento() {

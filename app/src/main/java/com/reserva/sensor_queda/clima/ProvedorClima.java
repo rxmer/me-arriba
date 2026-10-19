@@ -19,10 +19,8 @@ import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** Consulta o clima atual na OpenWeather (Current Weather API). */
 public class ProvedorClima {
 
-    /** Chave da API do OpenWeather (definida em local.properties). */
     private static final String API_KEY = BuildConfig.OPENWEATHER_API_KEY;
 
     private static final String ENDPOINT =

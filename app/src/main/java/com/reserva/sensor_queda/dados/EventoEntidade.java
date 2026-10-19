@@ -3,7 +3,6 @@ package com.reserva.sensor_queda.dados;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-/** Evento registrado no historico do aplicativo. */
 @Entity(tableName = "eventos")
 public class EventoEntidade {
 

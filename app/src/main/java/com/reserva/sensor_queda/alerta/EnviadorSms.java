@@ -16,21 +16,12 @@ import com.reserva.sensor_queda.dados.TelefoneUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Envia o alerta de queda por SMS diretamente aos contatos de emergencia,
- * usando o chip do proprio aparelho (SmsManager). Nao depende de API externa
- * nem de internet: o SMS sai pela operadora do numero do dispositivo.
- */
 public final class EnviadorSms {
 
     public static class ResultadoSms {
-        /** Contatos que tiveram o SMS aceito para envio. */
         public int enviados;
-        /** Total de contatos cadastrados. */
         public int total;
-        /** Permissao de envio de SMS concedida pelo usuario. */
         public boolean permissaoConcedida;
-        /** Detalhe legivel do resultado. */
         public String detalhe;
     }
 
@@ -43,9 +34,6 @@ public final class EnviadorSms {
     private EnviadorSms() {
     }
 
-    /**
-     * @param mensagem texto enviado a todos os contatos (pode ser multipart).
-     */
     public static void enviar(Context context, List<ContatoEmergencia> contatos, String mensagem,
                               Callback callback) {
         final Context appContext = context.getApplicationContext();
@@ -102,7 +90,6 @@ public final class EnviadorSms {
         return SmsManager.getDefault();
     }
 
-    /** Normaliza para E.164; numeros antigos fora do padrao usam melhor esforco. */
     private static String normalizarTelefone(String telefone) {
         TelefoneUtil.Resultado resultado = TelefoneUtil.normalizar(telefone);
         if (resultado.isValido()) {

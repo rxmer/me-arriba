@@ -10,11 +10,6 @@ import com.reserva.sensor_queda.telemetria.EnviadorTelemetria;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Orquestra o envio de um alerta de queda: coleta localizacao, envia SMS
- * automatico com a localizacao aos contatos de emergencia, monta a amostra
- * de telemetria e escolhe o canal (API real Socorro ou modo demonstracao).
- */
 public class ServicoAlerta {
 
     public interface Callback {
@@ -27,7 +22,6 @@ public class ServicoAlerta {
         this.appContext = context.getApplicationContext();
     }
 
-    /** @param quedaG forca do impacto em G informada pelo detector (0 se panico). */
     public void enviarAlerta(final float quedaG, final Callback callback) {
         ProvedorLocalizacao.obterLocalizacao(appContext, infoLocalizacao -> {
             final RepositorioConfiguracoes configuracoes = RepositorioConfiguracoes.get(appContext);
@@ -43,7 +37,6 @@ public class ServicoAlerta {
 
             String mensagem = montarMensagemSms(configuracoes.getUsuario(), infoLocalizacao);
 
-            // Canal direto: SMS com a localizacao para cada contato de emergencia.
             EnviadorSms.enviar(appContext, contatos, mensagem, resultadoSms -> {
                 resultadoBase.smsTentado = resultadoSms.total > 0;
                 resultadoBase.smsPermissaoConcedida = resultadoSms.permissaoConcedida;
@@ -76,7 +69,6 @@ public class ServicoAlerta {
         });
     }
 
-    /** Monta o texto do SMS de emergencia com a localizacao e link do mapa. */
     private String montarMensagemSms(String usuario, ProvedorLocalizacao.InfoLocalizacao info) {
         StringBuilder sb = new StringBuilder();
         sb.append(appContext.getString(R.string.sms_alerta_queda, usuario));

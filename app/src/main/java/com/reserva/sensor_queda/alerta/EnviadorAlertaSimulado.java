@@ -3,10 +3,6 @@ package com.reserva.sensor_queda.alerta;
 import android.os.Handler;
 import android.os.Looper;
 
-/**
- * Envio simulado usado enquanto a API real nao esta configurada.
- * Deixa explicito que se trata de MODO DEMONSTRACAO.
- */
 public class EnviadorAlertaSimulado implements EnviadorAlerta {
 
     private final Handler handler = new Handler(Looper.getMainLooper());

@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** Acesso ao historico de eventos fora da thread de interface. */
 public class RepositorioEventos {
 
     public interface Callback {

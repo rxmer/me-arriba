@@ -6,26 +6,15 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
-/**
- * Detector heuristico de quedas combinando acelerometro e giroscopio.
- *
- * <p>Estrategia: uma queda tipica apresenta um periodo de quase ausencia de
- * gravidade (queda livre) seguido por um pico brusco de aceleracao (impacto)
- * e/ou rotacao abrupta. Proximidade e barometro sao opcionais e nao fazem
- * parte desta versao.</p>
- *
- * <p>O detector NAO e infalivel: e um algoritmo de demonstracao que precisa
- * de calibracao e testes em campo.</p>
- */
 public class DetectorQueda implements SensorEventListener {
 
     public interface Listener {
         void aoPotencialQueda(boolean simulated);
     }
 
-    private static final float LIMITE_QUEDA_LIVRE = 3.5f;   // m/s^2
-    private static final float LIMITE_IMPACTO = 25.0f;      // m/s^2
-    private static final float LIMITE_GIRO = 3.0f;          // rad/s
+    private static final float LIMITE_QUEDA_LIVRE = 3.5f;
+    private static final float LIMITE_IMPACTO = 25.0f;
+    private static final float LIMITE_GIRO = 3.0f;
     private static final long JANELA_QUEDA_MS = 1200L;
     private static final long INTERVALO_MINIMO_MS = 8000L;
 
@@ -113,7 +102,6 @@ public class DetectorQueda implements SensorEventListener {
         registrado = false;
     }
 
-    /** Dispara um evento de queda simulado, claramente marcado como teste. */
     public void simular() {
         long agora = System.currentTimeMillis();
         if (agora - ultimoDisparo < INTERVALO_MINIMO_MS) {

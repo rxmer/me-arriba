@@ -10,14 +10,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Persistencia local das preferencias e dos contatos de emergencia. */
 public class RepositorioConfiguracoes {
 
     public static final int TRANSPORTE_MOTO = 0;
     public static final int TRANSPORTE_BICICLETA = 1;
     public static final int TRANSPORTE_CAMINHADA = 2;
 
-    /** Endpoint real do sistema de telemetria/emergencia. */
     public static final String DEFAULT_ENDPOINT = "https://ideaberta.com.br/socorro/";
 
     private static final String PREFS = "me_arriba_prefs";

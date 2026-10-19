@@ -1,13 +1,5 @@
 package com.reserva.sensor_queda.dados;
 
-/**
- * Normaliza e valida telefones para o padrao E.164.
- *
- * <p>O app e focado no Brasil (+55). Aceita as formas mais comuns digitadas
- * pelo usuario (com parenteses, espacos, hifen, zero de tronco e codigo de
- * operadora) e converte para {@code +55DDDNUMERO}. Numeros internacionais
- * informados explicitamente com {@code +} sao preservados.</p>
- */
 public final class TelefoneUtil {
 
     public static final int OK = 0;
@@ -17,7 +9,6 @@ public final class TelefoneUtil {
 
     public static class Resultado {
         public final int motivo;
-        /** Telefone normalizado; preenchido apenas quando {@link #isValido()}. */
         public final String e164;
 
         private Resultado(int motivo, String e164) {
@@ -45,7 +36,6 @@ public final class TelefoneUtil {
             return new Resultado(TAMANHO, null);
         }
 
-        // Remove zero de tronco e prefixos de discagem (ex.: 011, 021, 0055).
         while (digitos.startsWith("0")) {
             digitos = digitos.substring(1);
         }
@@ -58,14 +48,12 @@ public final class TelefoneUtil {
         if (pareceBrasil) {
             digitos = digitos.substring(2);
         } else if (internacional) {
-            // Numero internacional explicito que nao e brasileiro: mantem E.164.
             if (digitos.length() >= 8 && digitos.length() <= 15) {
                 return new Resultado(OK, "+" + digitos);
             }
             return new Resultado(TAMANHO, null);
         }
 
-        // Formato com codigo de operadora: 0 + operadora(2) + DDD + numero.
         if (digitos.length() == 12 || digitos.length() == 13) {
             digitos = digitos.substring(2);
         }

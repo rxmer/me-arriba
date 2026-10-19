@@ -17,7 +17,6 @@ import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** Obtem a ultima localizacao conhecida e um resumo legivel. */
 public class ProvedorLocalizacao {
 
     public static class InfoLocalizacao {

@@ -25,7 +25,6 @@
             android:paddingEnd="@dimen/space_screen"
             android:paddingBottom="28dp">
 
-            <!-- Perfil -->
             <TextView
                 style="@style/Text.MeArriba.SectionLabel"
                 android:layout_width="match_parent"
@@ -54,7 +53,6 @@
                 </com.google.android.material.textfield.TextInputLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Contatos -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,7 +93,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
 
-            <!-- Monitoramento -->
             <TextView
                 style="@style/Text.MeArriba.SectionLabel"
                 android:layout_width="match_parent"
@@ -138,7 +135,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Modo de transporte -->
             <TextView
                 style="@style/Text.MeArriba.SectionLabel"
                 android:layout_width="match_parent"
@@ -194,7 +190,6 @@
                 </RadioGroup>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Check-in -->
             <TextView
                 style="@style/Text.MeArriba.SectionLabel"
                 android:layout_width="match_parent"
@@ -257,7 +252,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Demonstracao -->
             <TextView
                 style="@style/Text.MeArriba.SectionLabel"
                 android:layout_width="match_parent"
@@ -301,7 +295,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Permissoes -->
             <TextView
                 style="@style/Text.MeArriba.SectionLabel"
                 android:layout_width="match_parent"

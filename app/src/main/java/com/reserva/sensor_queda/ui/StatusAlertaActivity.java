@@ -26,7 +26,6 @@ import com.reserva.sensor_queda.alerta.ServicoAlerta;
 import com.reserva.sensor_queda.dados.RepositorioEventos;
 import com.reserva.sensor_queda.dados.TipoEvento;
 
-/** Tela 3 - Status real da tentativa de emergencia. */
 public class StatusAlertaActivity extends AppCompatActivity {
 
     private ImageView imgAlertaEstado;
@@ -88,7 +87,6 @@ public class StatusAlertaActivity extends AppCompatActivity {
         solicitarPermissaoSms();
     }
 
-    /** Pede a permissao de SMS (se necessario) antes de disparar o envio. */
     private void solicitarPermissaoSms() {
         boolean concedida = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED;

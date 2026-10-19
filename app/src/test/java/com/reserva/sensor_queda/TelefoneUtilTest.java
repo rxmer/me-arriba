@@ -8,7 +8,6 @@ import com.reserva.sensor_queda.dados.TelefoneUtil;
 
 import org.junit.Test;
 
-/** Testes da normalizacao de telefone para E.164. */
 public class TelefoneUtilTest {
 
     private void deveNormalizar(String entrada, String esperado) {
